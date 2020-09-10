@@ -1,0 +1,129 @@
+@import 'variables';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6{
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+}
+
+h1{
+    font-size: 6vmin;
+}
+
+h2{
+    font-size: 4.5vmin;
+}
+
+button{
+    text-decoration: none;
+    text-transform: uppercase;
+    @include flexCenter;
+    cursor: pointer;
+}
+
+li{
+    width: 40%;
+    height: 10%;
+    @include flexCenter;
+    position: relative;
+    border-radius: 50%;
+    list-style: none;
+
+    button{
+        @include fullSize;
+        color: white;
+        font-weight: bold;
+        font-size: 1.5vmin;
+        pointer-events: none;
+        background: rgb(50, 5, 77);
+        border: none;
+        border-radius: 50%;
+    }
+}
+
+i{
+    color: white;
+    cursor: pointer;
+}
+
+p{
+    color: white;
+    font-size: 2.5vmin;
+}
+
+.task{
+    height: 50vh;
+    margin-top: 4rem;
+    transition: ease-in-out 0.3s;
+
+    .titel-wrapper{
+        height: 20%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background: rgb(163, 126, 206);
+
+        .check-wrapper{
+            @include flexCenter;
+
+            i{
+                font-size: 3vmax;
+            }
+
+            .check{
+                color: rgb(47, 182, 47);
+            }
+
+            .cross{
+                color: rgb(216, 63, 63);
+            }
+        }
+    }
+
+    .task-wrapper,
+    .solution-wrapper{
+        height: 30%;
+        @include flexCenter;
+
+        input{
+            margin: 0 1rem;
+            background: none;
+            border: none;
+            border-bottom: solid 3px white;
+            color: rgb(47, 182, 47);
+            font-size: 2vmax;
+            width: 20%;
+            text-align: center;
+        }
+    }
+
+    .submit-wrapper{
+        height: 20%;
+        @include flexCenter;
+        
+        button{
+            width: 15%;
+            height: 50%;
+            font-size: 2.5vmin;
+            font-weight: bold;
+            background: rgb(47, 182, 47);
+            color: white;
+            border: solid 3px rgb(21, 105, 21);
+            border-radius: 2rem;
+        }
+    }
+}
+
+.dark{
+    background: black;
+}
+
+.dark-two{
+    background: black;
+}
